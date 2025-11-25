@@ -3,7 +3,7 @@ import { Mail } from 'lucide-react';
 import { EMAIL_TEMPLATE, COLORS } from '../constants';
 
 const EmailOrderBanner: React.FC = () => {
-  const mailtoLink = `mailto:${EMAIL_TEMPLATE.to}?subject=${encodeURIComponent(EMAIL_TEMPLATE.subject)}&body=${encodeURIComponent(EMAIL_TEMPLATE.body)}`;
+  const mailtoLink = `mailto:aadhaavafnp@gmail.com?subject=${encodeURIComponent(EMAIL_TEMPLATE.subject)}&body=${encodeURIComponent(EMAIL_TEMPLATE.body)}`;
 
   return (
     <div className="w-full bg-[#0F5A2A] border-b-4 border-[#D7A846] py-4 px-4 text-center relative overflow-hidden shadow-xl z-40">

@@ -21,7 +21,7 @@ const SnackScroll: React.FC = () => {
                     scrollContainer.style.scrollBehavior = 'smooth';
                     nextScrollLeft = itemWidth;
                 }
-                
+
                 scrollContainer.scrollTo({
                     left: nextScrollLeft,
                     behavior: 'smooth',
@@ -58,34 +58,34 @@ const SnackScroll: React.FC = () => {
 
     return (
         <div className="flex flex-col items-center bg-[#F8E9C9]">
-            <div 
-                className="w-3/4 md:h-[75vh] aspect-video md:aspect-auto relative z-20 overflow-hidden group rounded-2xl mx-auto bg-transparent"
+            <div
+                className="w-3/4 h-[60vh] md:h-[75vh] relative z-20 overflow-hidden group rounded-2xl mx-auto bg-transparent"
                 onMouseEnter={stopScrolling}
                 onMouseLeave={startScrolling}
             >
-                 <div ref={scrollContainerRef} className="flex whitespace-nowrap items-center h-full overflow-x-scroll snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                <div ref={scrollContainerRef} className="flex whitespace-nowrap items-center h-full overflow-x-scroll snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                     {scrollingProducts.map((product, index) => (
                         <div key={index} className={`snap-center inline-block w-full h-full flex-shrink-0 transition-opacity duration-700 ${activeIndex === index % PRODUCTS.length ? 'opacity-100' : 'opacity-60'}`}>
-                             <div className="w-full h-full relative">
-                                 <img 
-                                    src={product.image} 
-                                    alt={product.name} 
-                                    className="w-full h-full object-cover" 
-                                 />
-                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
-                                 <div className="absolute bottom-8 left-8 right-8 z-10">
-                                     <div className="bg-[#F8E9C9]/90 border-l-4 border-[#D7A846] px-4 py-3 shadow-lg rounded-lg">
-                                        <h3 className="text-[#7A0F12] font-serif font-bold text-2xl md:text-4xl leading-tight">{product.name}</h3>
-                                        <p className="text-[#0F5A2A] text-sm md:text-base font-semibold uppercase tracking-wider mt-1">{product.imageAlt}</p>
-                                     </div>
-                                 </div>
-                             </div>
+                            <div className="w-full h-full relative">
+                                <img
+                                    src={product.image}
+                                    alt={product.name}
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+                                <div className="absolute bottom-8 left-8 right-8 z-10">
+                                    <div className="bg-[#F8E9C9]/90 border-l-4 border-[#D7A846] px-4 py-3 shadow-lg rounded-lg whitespace-normal">
+                                        <h3 className="text-[#7A0F12] font-serif font-bold text-2xl md:text-4xl leading-tight break-words">{product.name}</h3>
+                                        <p className="text-[#0F5A2A] text-sm md:text-base font-semibold uppercase tracking-wider mt-1 break-words">{product.imageAlt}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     ))}
-                 </div>
+                </div>
             </div>
 
-             <div className="flex items-center space-x-2.5 mt-6">
+            <div className="flex items-center space-x-2.5 mt-6">
                 {PRODUCTS.map((_, index) => (
                     <button
                         key={index}

@@ -76,9 +76,14 @@ const Contact: React.FC = () => {
                       <div>
                           <h3 className="font-bold text-lg text-[#D7A846]">WhatsApp</h3>
                           <p className="text-lg font-medium">Chat with us for quick support</p>
-                          <button className="mt-2 bg-[#25D366] text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-[#128C7E] transition-colors">
+                          <a 
+                            href="https://wa.me/919876543210" // TODO: Replace with your WhatsApp number
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="mt-2 inline-block bg-[#25D366] text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-[#128C7E] transition-colors"
+                          >
                               Open WhatsApp
-                          </button>
+                          </a>
                       </div>
                   </div>
 
