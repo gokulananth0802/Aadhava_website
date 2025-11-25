@@ -27,7 +27,7 @@ const SnackScroll: React.FC = () => {
                     behavior: 'smooth',
                 });
             }
-        }, 3000);
+        }, 2500);
     };
 
     const stopScrolling = () => {
@@ -59,13 +59,13 @@ const SnackScroll: React.FC = () => {
     return (
         <div className="flex flex-col items-center bg-[#F8E9C9]">
             <div 
-                className="w-[75vw] h-[75vh] relative z-20 overflow-hidden group rounded-2xl mx-auto bg-white"
+                className="w-3/4 md:h-[75vh] aspect-video md:aspect-auto relative z-20 overflow-hidden group rounded-2xl mx-auto bg-transparent"
                 onMouseEnter={stopScrolling}
                 onMouseLeave={startScrolling}
             >
                  <div ref={scrollContainerRef} className="flex whitespace-nowrap items-center h-full overflow-x-scroll snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                     {scrollingProducts.map((product, index) => (
-                        <div key={index} className="snap-center inline-block w-full h-full flex-shrink-0">
+                        <div key={index} className={`snap-center inline-block w-full h-full flex-shrink-0 transition-opacity duration-700 ${activeIndex === index % PRODUCTS.length ? 'opacity-100' : 'opacity-60'}`}>
                              <div className="w-full h-full relative">
                                  <img 
                                     src={product.image} 

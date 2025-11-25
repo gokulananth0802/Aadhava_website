@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#7A0F12] border-t-4 border-[#D7A846] text-[#F8E9C9] relative z-10">
+    <footer className="bg-[#7A0F12] border-t-4 border-[#D7A846] text-[#F8E9C9] relative z-10 mt-16">
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0 text-center md:text-left">
           <h3 className="font-serif font-bold text-xl mb-1">Aadhava</h3>

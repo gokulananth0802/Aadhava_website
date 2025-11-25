@@ -1,6 +1,7 @@
 import React from 'react';
 import { Globe, Mail, MessageCircle, MapPin, CheckCircle } from 'lucide-react';
 import { GLOBAL_LOCATIONS, EMAIL_TEMPLATE } from '../constants';
+import AnimatedDiv from '../components/AnimatedDiv';
 
 const Contact: React.FC = () => {
   const mailtoLink = `mailto:${EMAIL_TEMPLATE.to}`;
@@ -17,15 +18,15 @@ const Contact: React.FC = () => {
       </div>
 
       {/* Global Reach Section */}
-      <div className="mb-20">
+      <AnimatedDiv className="mb-20">
         <div className="flex items-center justify-center mb-12">
             <Globe className="text-[#0F5A2A] mr-3" size={32} />
             <h2 className="text-3xl font-serif font-bold text-[#7A0F12]">Our Global Reach</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {GLOBAL_LOCATIONS.map((loc) => (
-                <div key={loc.country} className="bg-[#fff] border-4 border-[#7A0F12] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+            {GLOBAL_LOCATIONS.map((loc, index) => (
+                <AnimatedDiv key={loc.country} delay={index * 0.1} className="bg-[#fff] border-4 border-[#7A0F12] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
                     <div className="bg-[#7A0F12] p-4 flex justify-between items-center">
                         <h3 className="text-[#F8E9C9] font-serif font-bold text-xl">{loc.country}</h3>
                         <span className="bg-[#F8E9C9] text-[#7A0F12] font-bold px-2 py-1 rounded text-xs">{loc.flagCode}</span>
@@ -43,15 +44,15 @@ const Contact: React.FC = () => {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </AnimatedDiv>
             ))}
         </div>
-      </div>
+      </AnimatedDiv>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           
           {/* Contact Details */}
-          <div className="bg-[#0F5A2A] text-[#F8E9C9] rounded-xl p-8 shadow-xl border-4 border-[#D7A846]">
+          <AnimatedDiv className="bg-[#0F5A2A] text-[#F8E9C9] rounded-xl p-8 shadow-xl border-4 border-[#D7A846]">
               <h2 className="text-3xl font-serif font-bold mb-8 border-b border-[#D7A846] pb-4">Get In Touch</h2>
               
               <div className="space-y-8">
@@ -95,10 +96,10 @@ const Contact: React.FC = () => {
                       </div>
                   </div>
               </div>
-          </div>
+          </AnimatedDiv>
 
           {/* Quality Certifications & Alternative Contact */}
-          <div className="space-y-8">
+          <AnimatedDiv className="space-y-8" delay={0.2}>
               {/* Certifications */}
               <div className="bg-[#F8E9C9] border-4 border-[#7A0F12] rounded-xl p-8 text-center relative">
                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#7A0F12] text-[#F8E9C9] px-6 py-2 rounded-full font-bold border-2 border-[#D7A846]">
@@ -132,7 +133,7 @@ const Contact: React.FC = () => {
                       </a>
                   </div>
               </div>
-          </div>
+          </AnimatedDiv>
       </div>
 
     </div>
