@@ -25,10 +25,8 @@ const Home: React.FC = () => {
       {/* Product Showcase Grid */}
       <section className=" px-4 max-w-7xl mx-auto relative z-10">
         <AnimatedDiv className="text-center mb-16">
-          <h3 className="text-4xl font-serif font-bold text-[#7A0F12] mb-4 relative inline-block">
-            <span className="absolute -left-8 top-1/2 w-6 h-1 bg-[#D7A846]"></span>
+          <h3 className="text-4xl font-serif font-bold text-[#7A0F12] mb-4">
             Our Featured Selection
-            <span className="absolute -right-8 top-1/2 w-6 h-1 bg-[#D7A846]"></span>
           </h3>
           <p className="text-[#0F5A2A] font-medium italic">Handcrafted with love and tradition</p>
         </AnimatedDiv>
@@ -43,8 +41,8 @@ const Home: React.FC = () => {
                 <div className="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[#D7A846] z-10 rounded-bl-lg"></div>
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[#D7A846] z-10 rounded-br-lg"></div>
 
-                        <div className="p-8 flex flex-col items-center text-center h-full justify-between bg-[url('https://www.transparenttextures.com/patterns/white-diamond.png')]">
-                            <div className="w-48 h-48 rounded-full bg-[#7A0F12] border-4 border-[#D7A846] flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300 overflow-hidden relative shadow-inner">
+                <div className="p-8 flex flex-col items-center text-center h-full justify-between bg-[url('https://www.transparenttextures.com/patterns/white-diamond.png')]">
+                  <div className="w-48 h-48 rounded-full bg-[#7A0F12] border-4 border-[#D7A846] flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300 overflow-hidden relative shadow-inner">
                     <img src={product.image} alt={product.name} className="w-full h-full object-cover transform scale-110 group-hover:scale-125 transition-transform duration-700" />
                   </div>
 
