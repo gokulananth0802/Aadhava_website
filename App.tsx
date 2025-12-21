@@ -6,6 +6,7 @@ import FloatingSnacks from './components/FloatingSnacks';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import ProductDetail from './pages/ProductDetail';
 import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
@@ -16,19 +17,20 @@ const App: React.FC = () => {
         <ScrollToTop />
         {/* Critical Background Animation */}
         <FloatingSnacks />
-        
+
         {/* Navigation */}
         <Navbar />
-        
+
         {/* Main Content Area */}
         <main className="flex-grow relative z-10">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/product/:slug" element={<ProductDetail />} />
           </Routes>
         </main>
-        
+
         {/* Footer */}
         <Footer />
       </div>
