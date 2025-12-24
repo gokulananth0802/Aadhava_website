@@ -196,7 +196,7 @@ export const GLOBAL_LOCATIONS: GlobalLocation[] = [
 ];
 
 export const EMAIL_TEMPLATE = {
-  to: 'aadhaavafnp@gmail.com',
+  to: 'aadhavaattan@gmail.com',
   subject: 'New Snack Order from [Customer Name]',
   body: `Hello Aadhava Team,
 

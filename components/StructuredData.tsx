@@ -14,7 +14,7 @@ export const OrganizationSchema: React.FC = () => {
         "foundingDate": "2023",
         "contactPoint": {
             "@type": "ContactPoint",
-            "email": "aadhaavafnp@gmail.com",
+            "email": "aadhavaattan@gmail.com",
             "contactType": "customer service",
             "areaServed": ["IN", "SG", "CA"],
             "availableLanguage": ["English", "Tamil"]
@@ -136,7 +136,7 @@ export const LocalBusinessSchema: React.FC = () => {
             "postalCode": "600001",
             "addressCountry": "IN"
         },
-        "email": "aadhaavafnp@gmail.com",
+        "email": "aadhavaattan@gmail.com",
         "url": "https://www.aadhavaattan.com",
         "priceRange": "$$",
         "openingHoursSpecification": {

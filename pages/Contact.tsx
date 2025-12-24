@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
                             <div>
                                 <h3 className="font-bold text-lg text-[#D7A846]">Email Us</h3>
                                 <a href={mailtoLink} className="text-xl underline decoration-[#D7A846] decoration-2 underline-offset-4 hover:text-[#D7A846] transition-colors">
-                                    aadhaavafnp@gmail.com
+                                    aadhavaattan@gmail.com
                                 </a>
                                 <p className="text-sm mt-2 opacity-80">For orders, exports, and inquiries</p>
                             </div>
